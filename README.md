@@ -1,9 +1,103 @@
-# Medingen Project
+# MediGen - Medicine Information System
 
-## Overview
-The Medingen project consists of a React frontend and a Flask backend, designed to dynamically load and display product information, salt content, reviews, and descriptions from a MySQL database. This README provides an overview of the project structure and setup instructions.
+A full-stack web application for managing and viewing medicine information, including details, alternatives, reviews, and FAQs.
+
+## Features
+
+- 🔍 **Medicine Search** - Search for medicines by name
+- 📊 **Medicine Details** - View comprehensive information including active ingredients and uses
+- 🔄 **Compare Alternatives** - Compare different medicine options
+- ⭐ **Reviews & Ratings** - Read and submit medicine reviews
+- ❓ **FAQs** - Frequently asked questions about medicines
+- 📱 **Responsive Design** - Works on desktop and mobile devices
+
+## Tech Stack
+
+### Backend
+
+- **Flask** - Python web framework
+- **SQLAlchemy** - Database ORM
+- **SQLite** - Database (can be easily switched to MySQL/PostgreSQL)
+- **Flask-CORS** - Cross-origin resource sharing
+- **Flask-JWT-Extended** - JWT authentication
+
+### Frontend
+
+- **React** - UI library
+- **Vite** - Build tool and development server
+- **Tailwind CSS** - Utility-first CSS framework
+
+## Quick Start
+
+### Prerequisites
+
+- Python 3.8+
+- Node.js 16+
+- npm or yarn
+
+### Option 1: Automatic Setup (Windows)
+
+1. Clone the repository
+2. Double-click `start_medigen.bat` to start both servers automatically
+
+### Option 2: Manual Setup
+
+#### Backend Setup
+
+1. Navigate to the Backend directory:
+
+   ```bash
+   cd Backend
+   ```
+
+2. Create and activate virtual environment:
+
+   ```bash
+   # Windows
+   python -m venv venv
+   venv\Scripts\activate
+
+   # macOS/Linux
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Run the backend server:
+   ```bash
+   python app.py
+   ```
+
+The backend server will start at `http://localhost:5000`
+
+#### Frontend Setup
+
+1. Navigate to the Frontend directory:
+
+   ```bash
+   cd Frontend
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+The frontend will be available at `http://localhost:5173` (or `http://localhost:3000`)
 
 ## Project Structure
+
 ```
 medingen-app
 ├── backend                # Flask API
@@ -48,6 +142,7 @@ medingen-app
 ## Setup Instructions
 
 ### Backend Setup
+
 1. Navigate to the `backend` directory.
 2. Install the required dependencies:
    ```
@@ -60,6 +155,7 @@ medingen-app
    ```
 
 ### Frontend Setup
+
 1. Navigate to the `frontend` directory.
 2. Install the required dependencies:
    ```
@@ -71,7 +167,9 @@ medingen-app
    ```
 
 ### Database Setup
+
 1. Import the `medingen_db_export.sql` file into your local MySQL database to create the necessary tables and sample data.
 
 ## Conclusion
+
 This project demonstrates a full-stack application using React and Flask, with a focus on modular design, dynamic data loading, and best practices in both frontend and backend development.
